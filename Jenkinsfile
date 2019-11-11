@@ -1,20 +1,15 @@
 pipeline {
-    agent any 
+   agent { label 'slave' }
     stages {
-        stage('Build') { 
+        
+        stage('Checkout') {
             steps {
-                sh 'mvn clean package' 
+        checkout scm
             }
-        }
-        stage('Test') { 
-            steps {
-                sh 'echo Test' 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                sh 'echo Deploy'
-            }
-        }
+    }
+      
+   
+        
+      
     }
 }
