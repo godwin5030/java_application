@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jenkins_runner' }
+    agent none
     stages {
         stage('Back-end') {
             agent {
