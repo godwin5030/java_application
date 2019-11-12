@@ -1,9 +1,9 @@
 pipeline {
-    agent {label 'jenkins_runner'}
+    
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'maven:3-alpine' }
+                docker1 { image 'maven:3-alpine' }
             }
             
             steps {
